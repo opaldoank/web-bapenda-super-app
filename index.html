@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAPENDA - Badan Pendapatan Daerah Provinsi Lampung</title>
+    <meta name="description" content="Badan Pendapatan Daerah Provinsi Lampung - Pelayanan pajak daerah modern, transparan, dan akuntabel">
+    <meta name="keywords" content="BAPENDA, Lampung, pajak daerah, PKB, PBB, pajak kendaraan">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/lampunglogo.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-ring">
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="ring"></div>
+            </div>
+            <h3>BAPENDA Lampung</h3>
+            <p>Memuat sistem...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">
+                    <div class="logo-icon">
+                        <img src="img/lampunglogo.png" alt="Logo Lampung" />
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">BAPENDA</span>
+                        <span class="logo-sub">Provinsi Lampung</span>
+                    </div>
+                </a>
+
+                <nav class="main-nav">
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#home" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Beranda</span>
+                        </a></li>
+                        <li><a href="#berita" class="nav-link">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Berita</span>
+                        </a></li>
+                        <li><a href="#profil" class="nav-link">
+                            <i class="fas fa-building"></i>
+                            <span>Profil</span>
+                        </a></li>
+                        <li><a href="#layanan" class="nav-link">
+                            <i class="fas fa-concierge-bell"></i>
+                            <span>Layanan</span>
+                        </a></li>
+                        <li><a href="#galeri" class="nav-link">
+                            <i class="fas fa-images"></i>
+                            <span>Galeri</span>
+                        </a></li>
+                        <li><a href="#kontak" class="nav-link">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Kontak</span>
+                        </a></li>
+                    </ul>
+                    
+                    <div class="header-actions">
+                        <button class="theme-toggle" id="themeToggle" title="Ganti Tema">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                            <span class="hamburger-line"></span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="header-progress" id="headerProgress"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-particles" id="heroParticles"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-up">
+                    <i class="fas fa-star"></i>
+                    <span>Pelayanan Terdepan & Terpercaya</span>
+                </div>
+                
+                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                    <span class="title-gradient">BAPENDA</span>
+                    <span class="title-main">PROVINSI LAMPUNG</span>
+                </h1>
+                
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                    Transformasi digital pelayanan pajak daerah dengan teknologi terdepan 
+                    untuk transparansi, efisiensi, dan kemudahan akses maksimal
+                </p>
+                
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                    <div class="stat-item">
+                        <div class="stat-number">15K+</div>
+                        <div class="stat-label">Wajib Pajak</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Kepuasan</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Online</div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+                    <a href="#layanan" class="btn btn-primary btn-glow">
+                        <i class="fas fa-rocket"></i>
+                        <span>Mulai Sekarang</span>
+                    </a>
+                    <a href="#profil" class="btn btn-outline">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Lihat Demo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" data-aos="fade-in" data-aos-delay="1000">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll untuk melihat lebih</span>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="berita" class="news-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Terkini</span>
+                </div>
+                <h2 class="section-title">Berita & Pengumuman</h2>
+                <p class="section-subtitle">Informasi terbaru dan pengumuman penting dari BAPENDA Lampung</p>
+            </div>
+            
+            <div class="news-grid">
+                <article class="news-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1560472355-109703aa3edc?ixlib=rb-4.0.3&w=800" 
+                             alt="Transformasi Digital BAPENDA 2025" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-category">Utama</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                15 Desember 2024
+                            </span>
+                            <span class="card-author">
+                                <i class="fas fa-user"></i>
+                                Admin BAPENDA
+                            </span>
+                        </div>
+                        <h3 class="card-title">Transformasi Digital BAPENDA 2025</h3>
+                        <p class="card-excerpt">
+                            Peluncuran sistem digital terintegrasi untuk meningkatkan efisiensi 
+                            pelayanan pajak daerah dengan teknologi AI dan cloud computing.
+                        </p>
+                        <a href="#" class="card-link">
+                            <span>Baca Selengkapnya</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="news-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&w=600" 
+                             alt="Aplikasi Mobile BAPENDA" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-category">Teknologi</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                10 Desember 2024
+                            </span>
+                        </div>
+                        <h3 class="card-title">Aplikasi Mobile BAPENDA Terbaru</h3>
+                        <p class="card-excerpt">
+                            Nikmati kemudahan akses layanan pajak kapan saja dan di mana saja 
+                            melalui aplikasi mobile yang telah diperbaharui.
+                        </p>
+                        <a href="#" class="card-link">
+                            <span>Baca Selengkapnya</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="news-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=600" 
+                             alt="Sosialisasi Peraturan Pajak" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-category">Edukasi</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">
+                                <i class="fas fa-calendar-alt"></i>
+                                05 Desember 2024
+                            </span>
+                        </div>
+                        <h3 class="card-title">Sosialisasi Peraturan Pajak Baru</h3>
+                        <p class="card-excerpt">
+                            Edukasi kepada masyarakat mengenai peraturan pajak daerah terbaru 
+                            untuk meningkatkan kepatuhan wajib pajak.
+                        </p>
+                        <a href="#" class="card-link">
+                            <span>Baca Selengkapnya</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="section-footer" data-aos="fade-up" data-aos-delay="400">
+                <a href="#" class="btn btn-outline">
+                    <span>Lihat Semua Berita</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="layanan" class="services-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-concierge-bell"></i>
+                    <span>Layanan</span>
+                </div>
+                <h2 class="section-title">Layanan Unggulan</h2>
+                <p class="section-subtitle">Berbagai layanan digital untuk kemudahan urusan pajak Anda</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Pajak Kendaraan</h3>
+                        <p class="service-description">
+                            Bayar PKB dan BBNKB secara online dengan mudah, cepat, dan aman 
+                            tanpa perlu antri di kantor.
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">Online 24/7</span>
+                            <span class="feature-tag">Tanpa Antri</span>
+                        </div>
+                    </div>
+                    <div class="service-action">
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <span>Akses Layanan</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">PBB P2</h3>
+                        <p class="service-description">
+                            Pembayaran Pajak Bumi dan Bangunan Perkotaan dan Perdesaan 
+                            dengan sistem yang terintegrasi.
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">Real-time</span>
+                            <span class="feature-tag">Terintegrasi</span>
+                        </div>
+                    </div>
+                    <div class="service-action">
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <span>Akses Layanan</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Pajak Reklame</h3>
+                        <p class="service-description">
+                            Pengurusan perizinan dan pembayaran pajak reklame 
+                            dengan proses yang lebih efisien.
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">Efisien</span>
+                            <span class="feature-tag">Transparan</span>
+                        </div>
+                    </div>
+                    <div class="service-action">
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <span>Akses Layanan</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Pajak Restoran</h3>
+                        <p class="service-description">
+                            Layanan pajak khusus untuk sektor kuliner dan perhotelan 
+                            dengan sistem yang user-friendly.
+                        </p>
+                        <div class="service-features">
+                            <span class="feature-tag">User-friendly</span>
+                            <span class="feature-tag">Support 24/7</span>
+                        </div>
+                    </div>
+                    <div class="service-action">
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <span>Akses Layanan</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profil" class="profile-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-building"></i>
+                    <span>Tentang Kami</span>
+                </div>
+                <h2 class="section-title">Profil BAPENDA</h2>
+                <p class="section-subtitle">
+                    Badan Pendapatan Daerah yang berkomitmen untuk pelayanan terbaik
+                </p>
+            </div>
+            
+            <div class="profile-content">
+                <div class="profile-text" data-aos="fade-right">
+                    <h3 class="profile-title">Visi & Misi BAPENDA Lampung</h3>
+                    <p class="profile-description">
+                        Badan Pendapatan Daerah (BAPENDA) Provinsi Lampung adalah institusi 
+                        yang bertanggung jawab dalam pengelolaan pendapatan asli daerah, 
+                        khususnya dalam sektor perpajakan daerah dengan mengedepankan 
+                        transparansi, akuntabilitas, dan pelayanan prima.
+                    </p>
+                    
+                    <div class="profile-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-eye"></i>
+                            <div>
+                                <h4>Visi</h4>
+                                <p>Menjadi lembaga pengelola pajak daerah yang modern, transparan, dan terpercaya</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-bullseye"></i>
+                            <div>
+                                <h4>Misi</h4>
+                                <p>Mengoptimalkan penerimaan daerah melalui pelayanan berkualitas dan inovasi teknologi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-image" data-aos="fade-left">
+                    <img src="img/bg1.jpg" alt="Gedung BAPENDA Lampung" loading="lazy">
+                    <div class="image-overlay">
+                        <div class="play-button" id="playButton">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="uptd-section" data-aos="fade-up">
+                <h3 class="uptd-title">Unit Pelaksana Teknis Daerah</h3>
+                <p class="uptd-subtitle">Jaringan layanan BAPENDA di seluruh Lampung</p>
+                
+                <div class="uptd-grid">
+                    <a href="https://bapenda.lampungprov.go.id/bandar-lampung" target="_blank" class="uptd-card">
+                        <div class="uptd-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="uptd-content">
+                            <h4>Bandar Provinsi Lampung</h4>
+                            <p>Pusat Pelayanan Utama</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+
+                    <a href="https://bapenda.lampungprov.go.id/uptd1-bandar-lampung" target="_blank" class="uptd-card">
+                        <div class="uptd-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="uptd-content">
+                            <h4>UPTD I Bandar Lampung</h4>
+                            <p>Wilayah Bandar Lampung</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+
+                    <a href="https://bapenda.lampungprov.go.id/uptd2-lampung-selatan" target="_blank" class="uptd-card">
+                        <div class="uptd-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <div class="uptd-content">
+                            <h4>UPTD II Lampung Selatan</h4>
+                            <p>Wilayah Lampung Selatan</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+
+                    <a href="https://bapenda.lampungprov.go.id/uptd3-metro" target="_blank" class="uptd-card">
+                        <div class="uptd-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <div class="uptd-content">
+                            <h4>UPTD III Metro</h4>
+                            <p>Wilayah Kota Metro</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+
+                    <a href="https://bapenda.lampungprov.go.id/uptd4-lampung-tengah" target="_blank" class="uptd-card">
+                        <div class="uptd-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div class="uptd-content">
+                            <h4>UPTD IV Lampung Tengah</h4>
+                            <p>Wilayah Lampung Tengah</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+
+                    <a href="https://bapenda.lampungprov.go.id/uptd5-lampung-timur" target="_blank" class="uptd-card">
+                        <div class="uptd-icon">
+                            <i class="fas fa-map-location-dot"></i>
+                        </div>
+                        <div class="uptd-content">
+                            <h4>UPTD V Lampung Timur</h4>
+                            <p>Wilayah Lampung Timur</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-outline" id="showMoreUptd">
+                        <span>Lihat Semua UPTD</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeri" class="gallery-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-images"></i>
+                    <span>Galeri</span>
+                </div>
+                <h2 class="section-title">Galeri Kegiatan</h2>
+                <p class="section-subtitle">Dokumentasi kegiatan dan fasilitas BAPENDA Lampung</p>
+            </div>
+            
+            <div class="gallery-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="kegiatan">Kegiatan</button>
+                <button class="filter-btn" data-filter="fasilitas">Fasilitas</button>
+                <button class="filter-btn" data-filter="event">Event</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="kegiatan" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&w=800" 
+                         alt="Kegiatan Sosialisasi" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Kegiatan Sosialisasi</h4>
+                            <p>Sosialisasi peraturan pajak terbaru</p>
+                            <button class="gallery-btn" data-lightbox="gallery">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="fasilitas" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1560472355-109703aa3edc?ixlib=rb-4.0.3&w=800" 
+                         alt="Fasilitas Kantor" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Fasilitas Modern</h4>
+                            <p>Kantor pelayanan modern</p>
+                            <button class="gallery-btn" data-lightbox="gallery">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="event" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&w=800" 
+                         alt="Event Launching" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Launching Aplikasi</h4>
+                            <p>Peluncuran aplikasi mobile</p>
+                            <button class="gallery-btn" data-lightbox="gallery">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="kegiatan" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=800" 
+                         alt="Pelatihan Staff" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Pelatihan Staff</h4>
+                            <p>Peningkatan kapasitas pegawai</p>
+                            <button class="gallery-btn" data-lightbox="gallery">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Kontak</span>
+                </div>
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p class="section-subtitle">Kami siap membantu Anda dengan layanan terbaik</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@bapenda.lampungprov.go.id<br>
+                               layanan@bapenda.lampungprov.go.id</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Jam Layanan</h4>
+                            <p>Senin - Jumat: 08:00 - 16:00<br>
+                               Sabtu: 08:00 - 12:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <div class="whatsapp-center">
+                        <div class="wa-header">
+                            <div class="wa-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="wa-info">
+                                <h3>WhatsApp Center BAPENDA</h3>
+                                <p>Layanan chat cepat & responsif 24/7</p>
+                            </div>
+                        </div>
+                        
+                        <div class="wa-content">
+                            <p>Hubungi kami melalui WhatsApp untuk mendapatkan bantuan cepat 
+                               terkait layanan pajak daerah</p>
+                            
+                            <a href="https://wa.me/6285267884488" target="_blank" class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Chat via WhatsApp</span>
+                            </a>
+                            
+                            <div class="qr-section">
+                                <p class="qr-title">Atau scan QR Code:</p>
+                                <div id="wa-qrcode" class="qr-code"></div>
+                                <p class="qr-subtitle">Scan untuk chat langsung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-content" data-aos="fade-up">
+                <div class="stats-header">
+                    <h2>Pencapaian BAPENDA</h2>
+                    <p>Data statistik kinerja dan pencapaian pelayanan kami</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="15000">0</div>
+                            <div class="stat-label">Wajib Pajak Aktif</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="98">0</div>
+                            <div class="stat-label">Tingkat Kepuasan (%)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="24">0</div>
+                            <div class="stat-label">Jam Layanan Online</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Jenis Layanan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                        <div class="footer-logo">
+                            <img src="img/lampunglogo.png" alt="Logo Lampung">
+                            <div class="logo-text">
+                                <h4>BAPENDA</h4>
+                                <span>Provinsi Lampung</span>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            Melayani dengan integritas, transparansi, dan akuntabilitas 
+                            untuk kemajuan Provinsi Lampung yang berkelanjutan.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="footer-title">Layanan Cepat</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                Cek Pajak Online
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                Pembayaran PKB
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                Pembayaran PBB
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                Download Aplikasi
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                Simulasi Pajak
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="footer-title">Informasi</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                Peraturan Daerah
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                Tata Cara Pembayaran
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                FAQ
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                Peta Situs
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                Laporan Keuangan
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section" data-aos="fade-up" data-aos-delay="400">
+                        <h4 class="footer-title">Kontak Kami</h4>
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Jl. Sultan Hasanudin No.45<br>Bandar Lampung 35221</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(0721) 481126</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@bapenda.lampungprov.go.id</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>0852 6788 4488</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 BAPENDA Provinsi Lampung. Hak Cipta Dilindungi.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Kebijakan Privasi</a>
+                        <a href="#">Syarat & Ketentuan</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <button class="fab-item" id="fabWhatsapp" title="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+        <button class="fab-item" id="fabCall" title="Telepon">
+            <i class="fas fa-phone"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Alamat Kantor</h4>
+                            <p>Jl. Sultan Hasanudin No.45, Gn. MAS<br>
+                               Kec. Tlk. Betung Utara, Kota Bandar Lampung<br>
+                               Lampung 35221</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telepon</h4>
+                            <p>(0721) 481126<br>
+                               0852 6788 4488</p>
+                        </div>
+                    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      // Generate QR code WhatsApp Center
+      new QRCode(document.getElementById('wa-qrcode'), {
+        text: 'https://wa.me/6285267884488',
+        width: 150,
+        height: 150,
+        colorDark: '#25D366',
+        colorLight: '#fff',
+        correctLevel: QRCode.CorrectLevel.H,
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
