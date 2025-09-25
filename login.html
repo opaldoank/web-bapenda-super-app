@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAPENDA Admin - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="login-style.css" />
+  </head>
+  <body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+      <div class="login-container">
+        <div class="login-header">
+          <div class="logo">
+            <img src="img/lampunglogo.png" alt="Logo Lampung" />
+          </div>
+          <h1>BAPENDA Admin</h1>
+          <p>Sistem Administrasi Badan Pendapatan Daerah</p>
+        </div>
+
+        <form class="login-form" id="loginForm">
+          <div class="role-selection">
+            <div class="role-option">
+              <input type="radio" id="superAdmin" name="role" value="superadmin" />
+              <label for="superAdmin" class="role-label">
+                <i class="fas fa-crown role-icon"></i>
+                <span class="role-title">Super Admin</span>
+                <span class="role-desc">Akses penuh sistem</span>
+              </label>
+            </div>
+            <div class="role-option">
+              <input type="radio" id="admin" name="role" value="admin" checked />
+              <label for="admin" class="role-label">
+                <i class="fas fa-user-shield role-icon"></i>
+                <span class="role-title">Admin</span>
+                <span class="role-desc">Kelola berita & galeri</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="username">Username</label>
+            <input type="text" id="username" class="form-input" placeholder="Masukkan username" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <div class="password-field">
+              <input type="password" id="password" class="form-input" placeholder="Masukkan password" required />
+              <button type="button" class="password-toggle" id="togglePassword">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="remember-me">
+              <input type="checkbox" id="remember" class="checkbox" />
+              <label for="remember" class="checkbox-label">Ingat saya</label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" onclick="window.location.href='http://127.0.0.1:5500/index.html';">
+            <i class="fas fa-sign-in-alt"></i>
+            Masuk ke Dashboard
+          </button>
+        </form>
+
+        <div class="login-footer">
+          <p>&copy; 2025 BAPENDA Provinsi Lampung</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="admin-dashboard hidden">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <img src="img/lampunglogo.png" alt="Logo Lampung" />
+            <span>BAPENDA Admin</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" data-section="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-section="news">
+                <i class="fas fa-newspaper"></i>
+                Kelola Berita
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-section="gallery">
+                <i class="fas fa-images"></i>
+                Kelola Galeri
+              </a>
+            </li>
+            <li class="nav-item" id="superAdminOnly" style="display: none">
+              <a href="#" class="nav-link" data-section="users">
+                <i class="fas fa-users"></i>
+                Kelola User
+              </a>
+            </li>
+            <li class="nav-item" id="settingsMenu" style="display: none">
+              <a href="#" class="nav-link" data-section="settings">
+                <i class="fas fa-cogs"></i>
+                Pengaturan
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="main-header">
+          <div class="header-left">
+            <button class="sidebar-toggle" id="sidebarToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+          <div class="header-right">
+            <div class="admin-info">
+              <span id="adminName">Admin</span>
+              <span id="adminRole" class="admin-role">Admin</span>
+            </div>
+            <div class="admin-avatar">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <button class="logout-btn" id="logoutBtn">
+              <i class="fas fa-sign-out-alt"></i>
+              Keluar
+            </button>
+          </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="content-area">
+          <!-- Dashboard Section -->
+          <section id="dashboardSection" class="content-section active">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="stat-info">
+                  <h3 id="totalNews">0</h3>
+                  <p>Total Berita</p>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-images"></i>
+                </div>
+                <div class="stat-info">
+                  <h3 id="totalGallery">0</h3>
+                  <p>Total Galeri</p>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>1,250</h3>
+                  <p>Pengunjung Hari Ini</p>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>15,670</h3>
+                  <p>Total Pengunjung</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-widgets">
+              <div class="widget">
+                <h3>Berita Terbaru</h3>
+                <div id="recentNews" class="recent-items">
+                  <p class="no-data">Belum ada berita</p>
+                </div>
+              </div>
+              <div class="widget">
+                <h3>Aktivitas Terbaru</h3>
+                <div class="activity-log">
+                  <div class="activity-item">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Sistem dimulai</span>
+                    <small>Baru saja</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- News Management Section -->
+          <section id="newsSection" class="content-section">
+            <div class="section-header">
+              <h2>Kelola Berita</h2>
+              <button class="btn btn-primary" id="addNewsBtn">
+                <i class="fas fa-plus"></i>
+                Tambah Berita
+              </button>
+            </div>
+
+            <div class="content-card">
+              <div class="news-list" id="newsList">
+                <p class="no-data">Belum ada berita. Klik "Tambah Berita" untuk memulai.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Gallery Management Section -->
+          <section id="gallerySection" class="content-section">
+            <div class="section-header">
+              <h2>Kelola Galeri</h2>
+              <button class="btn btn-primary" id="addGalleryBtn">
+                <i class="fas fa-plus"></i>
+                Tambah Gambar
+              </button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+              <p class="no-data">Belum ada gambar. Klik "Tambah Gambar" untuk memulai.</p>
+            </div>
+          </section>
+
+          <!-- Users Management Section (Super Admin Only) -->
+          <section id="usersSection" class="content-section">
+            <div class="section-header">
+              <h2>Kelola User</h2>
+              <button class="btn btn-primary" id="addUserBtn">
+                <i class="fas fa-user-plus"></i>
+                Tambah User
+              </button>
+            </div>
+
+            <div class="content-card">
+              <div class="users-list" id="usersList">
+                <p class="no-data">Loading...</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Settings Section (Super Admin Only) -->
+          <section id="settingsSection" class="content-section">
+            <div class="section-header">
+              <h2>Pengaturan</h2>
+            </div>
+
+            <div class="content-card">
+              <div class="settings-form">
+                <div class="form-group">
+                  <label class="form-label">Nama Website</label>
+                  <input type="text" class="form-input" value="BAPENDA Provinsi Lampung" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email Kontak</label>
+                  <input type="email" class="form-input" value="info@bapenda.lampungprov.go.id" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Nomor Telepon</label>
+                  <input type="tel" class="form-input" value="(0721) 481126" />
+                </div>
+                <button class="btn btn-primary">
+                  <i class="fas fa-save"></i>
+                  Simpan Pengaturan
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Add News Modal -->
+    <div id="addNewsModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Tambah Berita Baru</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <form id="addNewsForm" class="modal-form">
+          <div class="form-group">
+            <label class="form-label">Judul Berita</label>
+            <input type="text" id="newsTitle" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Kategori</label>
+            <select id="newsCategory" class="form-input" required>
+              <option value="">Pilih Kategori</option>
+              <option value="utama">Utama</option>
+              <option value="teknologi">Teknologi</option>
+              <option value="edukasi">Edukasi</option>
+              <option value="pengumuman">Pengumuman</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Gambar URL</label>
+            <input type="url" id="newsImage" class="form-input" placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Konten Berita</label>
+            <textarea id="newsContent" class="form-textarea" rows="5" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary modal-close">Batal</button>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-save"></i>
+              Simpan Berita
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Add Gallery Modal -->
+    <div id="addGalleryModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Tambah Gambar ke Galeri</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <form id="addGalleryForm" class="modal-form">
+          <div class="form-group">
+            <label class="form-label">Judul Gambar</label>
+            <input type="text" id="galleryTitle" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Kategori</label>
+            <select id="galleryCategory" class="form-input" required>
+              <option value="">Pilih Kategori</option>
+              <option value="kegiatan">Kegiatan</option>
+              <option value="fasilitas">Fasilitas</option>
+              <option value="event">Event</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">URL Gambar</label>
+            <input type="url" id="galleryImage" class="form-input" required placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Deskripsi</label>
+            <textarea id="galleryDescription" class="form-textarea" rows="3"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary modal-close">Batal</button>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-save"></i>
+              Simpan Gambar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="login-script.js"></script>
+  </body>
+</html>

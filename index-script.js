@@ -782,61 +782,61 @@ class BapendaWebsite {
     const additionalUptd = [
       {
         href: "https://bapenda.lampungprov.go.id/uptd6-lampung-utara",
-        icon: "fas fa-mountain",
+        icon: "fas fa-building",
         title: "UPTD VI Lampung Utara",
         subtitle: "Wilayah Lampung Utara"
       },
       {
         href: "https://bapenda.lampungprov.go.id/uptd7-pringsewu",
-        icon: "fas fa-tree",
+        icon: "fas fa-building",
         title: "UPTD VII Pringsewu",
         subtitle: "Wilayah Pringsewu"
       },
       {
         href: "https://bapenda.lampungprov.go.id/uptd8-pesawaran",
-        icon: "fas fa-water",
+        icon: "fas fa-building",
         title: "UPTD VIII Pesawaran",
         subtitle: "Wilayah Pesawaran"
       },
       {
         href: "https://bapenda.lampungprov.go.id/uptd9-pesisir-barat",
-        icon: "fas fa-waves",
+        icon: "fas fa-building",
         title: "UPTD IX Pesisir Barat",
         subtitle: "Wilayah Pesisir Barat"
       },
       {
         href: "https://bapenda.lampungprov.go.id/uptd10-way-kanan",
-        icon: "fas fa-river",
+        icon: "fas fa-building",
         title: "UPTD X Way Kanan",
         subtitle: "Wilayah Way Kanan"
       },
       {
         href: "https://bapenda.lampungprov.go.id/uptd11-tulang-bawang",
-        icon: "fas fa-seedling",
+        icon: "fas fa-building",
         title: "UPTD XI Tulang Bawang",
         subtitle: "Wilayah Tulang Bawang"
       },
       {
         href: "https://bapenda.lampungprov.go.id/uptd12-mesuji",
-        icon: "fas fa-leaf",
+        icon: "fas fa-building",
         title: "UPTD XII Mesuji",
         subtitle: "Wilayah Mesuji"
       },
       {
         href: "https://bapenda.lampungprov.go.id/uptd13-tanggamus",
-        icon: "fas fa-mountain-sun",
+        icon: "fas fa-building",
         title: "UPTD XIII Tanggamus",
         subtitle: "Wilayah Tanggamus"
       },
       {
         href: "https://bapenda.lampungprov.go.id/uptd14-lampung-barat",
-        icon: "fas fa-map",
+        icon: "fas fa-building",
         title: "UPTD XIV Lampung Barat",
         subtitle: "Wilayah Lampung Barat"
       },
       {
         href: "https://bapenda.lampungprov.go.id/uptd15-tulang-bawang-barat",
-        icon: "fas fa-globe",
+        icon: "fas fa-building",
         title: "UPTD XV Tulang Bawang Barat",
         subtitle: "Wilayah Tulang Bawang Barat"
       }
