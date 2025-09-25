@@ -48,7 +48,7 @@
                     </div>
                 </a>
 
-                <nav class="main-nav">
+                <nav class="main-nav" id="mainNav">
                     <ul class="nav-links" id="navLinks">
                         <li><a href="#home" class="nav-link active">
                             <i class="fas fa-home"></i>
@@ -75,18 +75,17 @@
                             <span>Kontak</span>
                         </a></li>
                     </ul>
-                    
                     <div class="header-actions">
                         <button class="theme-toggle" id="themeToggle" title="Ganti Tema">
                             <i class="fas fa-moon"></i>
                         </button>
-                        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-                            <span class="hamburger-line"></span>
-                            <span class="hamburger-line"></span>
-                            <span class="hamburger-line"></span>
-                        </button>
                     </div>
                 </nav>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
             </div>
         </div>
         <div class="header-progress" id="headerProgress"></div>
@@ -134,11 +133,11 @@
                 <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
                     <a href="#layanan" class="btn btn-primary btn-glow">
                         <i class="fas fa-rocket"></i>
-                        <span>Mulai Sekarang</span>
+                        <span>Layanan Unggulan</span>
                     </a>
                     <a href="#profil" class="btn btn-outline">
                         <i class="fas fa-play-circle"></i>
-                        <span>Lihat Demo</span>
+                        <span>Profil Bapenda</span>
                     </a>
                 </div>
             </div>
@@ -301,9 +300,9 @@
                         <i class="fas fa-home"></i>
                     </div>
                     <div class="service-content">
-                        <h3 class="service-title">PBB P2</h3>
+                        <h3 class="service-title">PAP Pajak Air Permukaan</h3>
                         <p class="service-description">
-                            Pembayaran Pajak Bumi dan Bangunan Perkotaan dan Perdesaan 
+                            Pembayaran Pajak Air Permukaan
                             dengan sistem yang terintegrasi.
                         </p>
                         <div class="service-features">
@@ -324,10 +323,10 @@
                         <i class="fas fa-ad"></i>
                     </div>
                     <div class="service-content">
-                        <h3 class="service-title">Pajak Reklame</h3>
+                        <h3 class="service-title">Pajak Alat Berat</h3>
                         <p class="service-description">
-                            Pengurusan perizinan dan pembayaran pajak reklame 
-                            dengan proses yang lebih efisien.
+                            Pembayaran Pajak Alat Berat
+                            dengan sistem yang terintegrasi
                         </p>
                         <div class="service-features">
                             <span class="feature-tag">Efisien</span>
@@ -347,9 +346,9 @@
                         <i class="fas fa-utensils"></i>
                     </div>
                     <div class="service-content">
-                        <h3 class="service-title">Pajak Restoran</h3>
+                        <h3 class="service-title">Pajak Bahan Bakar Kendaraan</h3>
                         <p class="service-description">
-                            Layanan pajak khusus untuk sektor kuliner dan perhotelan 
+                            Layanan pajak khusus untuk sektor Pajak Bahan Bakar Kendaraan 
                             dengan sistem yang user-friendly.
                         </p>
                         <div class="service-features">
@@ -851,6 +850,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
+        <script>
+        // Navbar hamburger menu logic
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mainNav = document.getElementById('mainNav');
+        function handleResize() {
+            if (window.innerWidth <= 768) {
+                mainNav.style.display = 'none';
+                mobileToggle.style.display = 'block';
+            } else {
+                mainNav.style.display = 'flex';
+                mobileToggle.style.display = 'none';
+            }
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        mobileToggle.addEventListener('click', function() {
+            if (mainNav.style.display === 'none') {
+                mainNav.style.display = 'flex';
+            } else {
+                mainNav.style.display = 'none';
+            }
+        });
+        </script>
 </body>
 </html>map-marker-alt"></i>
                         </div>
