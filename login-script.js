@@ -75,6 +75,7 @@ class AdminSystem {
             btn.addEventListener('click', (e) => {
                 const modal = e.target.closest('.modal');
                 this.hideModal(modal.id);
+                e.preventDefault();
             });
         });
 
@@ -83,6 +84,7 @@ class AdminSystem {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
                     this.hideModal(modal.id);
+                    e.preventDefault();
                 }
             });
         });
